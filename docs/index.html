@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lanyard for macOS</title>
+<meta name="description" content="Lanyard is a native macOS menu bar app that manages your Claude Code profiles: accounts, sessions, rules, IDE hand-off and usage, from one place.">
+<meta property="og:title" content="Lanyard for macOS">
+<meta property="og:description" content="Manage your Claude Code profiles from the menu bar.">
+<meta property="og:image" content="https://lanyard.nxsys.app/assets/og-image.png">
+<meta property="og:url" content="https://lanyard.nxsys.app">
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<style>
+  :root { --blue: #0052CC; --ink: #0b0b0e; --muted: #5c5c66; --bg: #ffffff; --card: #f5f6f8; --rule: #e3e5ea; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #f3f3f5; --muted: #a0a0aa; --bg: #0b0b0e; --card: #15161a; --rule: #26272d; } }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, "Helvetica Neue", Inter, Arial, sans-serif; }
+  a { color: var(--blue); text-decoration: none; } a:hover { text-decoration: underline; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  nav .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 18px; }
+  nav .brand img { width: 28px; height: 28px; border-radius: 7px; }
+  nav .links a { color: var(--ink); font-weight: 600; margin-left: 22px; }
+  .hero { padding: 56px 0 40px; text-align: center; }
+  .hero img.icon { width: 128px; height: 128px; border-radius: 28px; }
+  .hero h1 { font-size: 46px; line-height: 1.08; letter-spacing: -0.02em; margin: 20px auto 14px; max-width: 18ch; }
+  .hero p { font-size: 20px; color: var(--muted); max-width: 52ch; margin: 0 auto 26px; }
+  .btn { display: inline-block; background: var(--blue); color: #fff; font-weight: 600; padding: 13px 22px; border-radius: 12px; font-size: 17px; }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  .sub { font-size: 14px; color: var(--muted); margin-top: 12px; }
+  .shot { margin: 36px auto 0; max-width: 960px; border-radius: 16px; overflow: hidden; border: 1px solid var(--rule); box-shadow: 0 20px 60px rgba(0,0,0,0.12); background: var(--card); }
+  .shot img { display: block; width: 100%; height: auto; }
+  main { padding: 56px 0 24px; }
+  h2 { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .f { background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 20px; }
+  .f h3 { margin: 0 0 6px; font-size: 18px; }
+  .f p { margin: 0; color: var(--muted); font-size: 15px; }
+  .faq dt { font-weight: 600; margin-top: 16px; } .faq dd { margin: 4px 0 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--rule); margin-top: 56px; padding: 28px 0 40px; color: var(--muted); font-size: 15px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; }
+  footer img { height: 14px; }
+  @media (max-width: 600px) { .hero h1 { font-size: 34px; } nav .links a { margin-left: 14px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/"><img src="assets/lanyard-icon-256.png" alt="">Lanyard</a>
+    <div class="links"><a href="#features">Features</a><a href="#faq">FAQ</a><a href="https://github.com/NX-System/lanyard-support">Support</a></div>
+  </nav>
+
+  <section class="hero">
+    <img class="icon" src="assets/lanyard-icon-256.png" alt="Lanyard icon">
+    <h1>Your Claude Code profiles, from the menu bar.</h1>
+    <p>Lanyard keeps every Claude Code account, its sessions, rules and usage in one native macOS app. Switch profiles in a click, resume a chat in your IDE, and see where your plan stands.</p>
+    <a class="btn" href="https://github.com/NX-System/lanyard-releases/releases/latest">Download for macOS</a>
+    <div class="sub">macOS 14 or later. Free during the beta. <a href="https://github.com/NX-System/lanyard-releases/releases">Release notes</a></div>
+    <div class="shot"><img src="assets/hero.png" alt="Lanyard main window showing profiles and sessions"></div>
+  </section>
+
+  <main>
+    <h2 id="features">What it does</h2>
+    <div class="grid">
+      <div class="f"><h3>Profiles</h3><p>One entry per Claude Code account or config folder. Switch the active profile from the popover; terminals and IDEs follow.</p></div>
+      <div class="f"><h3>Sessions</h3><p>Every chat across every profile, searchable, renameable, with a recycle bin. Resume one in the terminal or straight in VS Code.</p></div>
+      <div class="f"><h3>Live usage</h3><p>Plan and usage at a glance, refreshed without any login dialogs.</p></div>
+      <div class="f"><h3>Rules</h3><p>Per-profile and per-project CLAUDE.md rules edited from a friendly UI, with a view of what is in effect.</p></div>
+      <div class="f"><h3>IDE hand-off</h3><p>A bundled VS Code extension picks up the session you choose and opens it in the right window.</p></div>
+      <div class="f"><h3>Support built in</h3><p>Report a problem from Settings; Lanyard shows exactly what it will send, with paths and tokens removed.</p></div>
+    </div>
+
+    <h2 id="faq" style="margin-top:48px">FAQ</h2>
+    <dl class="faq">
+      <dt>Does Lanyard send my data anywhere?</dt>
+      <dd>No. It reads Claude Code's own files on your Mac. The only network calls are the update check against this site and, when you press Send, the support report you reviewed.</dd>
+      <dt>Is it open source?</dt>
+      <dd>No. Lanyard is distributed as a signed binary under the <a href="eula.html">end user license</a>. Bug reports and requests are public on <a href="https://github.com/NX-System/lanyard-support">GitHub</a>.</dd>
+      <dt>Which Macs?</dt>
+      <dd>Apple silicon and Intel, macOS 14 or later, with Claude Code installed.</dd>
+      <dt>How do updates work?</dt>
+      <dd>Lanyard checks this site for new builds and tells you when one is ready. Updates are signed; nothing installs without you saying so.</dd>
+    </dl>
+  </main>
+
+  <footer>
+    <div class="row">
+      <img src="assets/wordmark-blue.svg" alt="Nexus Systems" style="height:14px">
+      <a href="https://nxsys.app">nxsys.app</a>
+      <a href="mailto:support@nxsysdev.com">support@nxsysdev.com</a>
+      <a href="eula.html">License</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <p>Lanyard is a product of Nexus Systems. Claude and Claude Code are trademarks of Anthropic, PBC; Lanyard is not affiliated with or endorsed by Anthropic.</p>
+  </footer>
+</div>
+</body>
+</html>
